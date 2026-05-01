@@ -32,3 +32,12 @@ Thumbs.db
 
 # Vercel
 .vercel
+
+# TypeScript
+*.tsbuildinfo
+
+# Testing
+coverage/
+
+# General logs
+*.log
