@@ -162,7 +162,7 @@ export default function HeroDuck() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 10, scale: 0.95 }}
               transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-              className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-72 bg-white/95 backdrop-blur-sm rounded-xl p-5 shadow-2xl border border-neutral-100 z-50"
+              className="absolute top-full left-1/2 -translate-x-1/2 -mt-2 w-72 bg-white/95 backdrop-blur-sm rounded-xl p-5 shadow-2xl border border-neutral-100 z-50"
               onClick={(e) => e.stopPropagation()}
             >
               <p className="text-[10px] font-mono uppercase tracking-widest text-red-800 mb-2">
