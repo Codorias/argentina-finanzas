@@ -1,16 +1,31 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function HeroDuck() {
+  const [showStory, setShowStory] = useState(false);
+  const [quackKey, setQuackKey] = useState(0);
+
+  const triggerQuack = () => {
+    setQuackKey((k) => k + 1);
+  };
+
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
+    <div className="absolute inset-0 select-none">
       {/* Pato principal - oculto en mobile, visible en md+ */}
       <motion.div
         initial={{ opacity: 0, x: 40 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        className="hidden md:block absolute top-1/2 right-0 md:right-4 lg:right-16 -translate-y-1/2 w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 opacity-30 lg:opacity-100"
+        className="hidden md:block absolute top-1/2 right-0 md:right-4 lg:right-16 -translate-y-1/2 w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 opacity-30 lg:opacity-100 cursor-pointer pointer-events-auto hover:opacity-100 transition-opacity duration-500"
+        onMouseEnter={() => setShowStory(true)}
+        onMouseLeave={() => setShowStory(false)}
+        whileTap={{ scale: 0.92 }}
+        onClick={() => {
+          triggerQuack();
+          setShowStory((prev) => !prev);
+        }}
       >
         <svg
           viewBox="0 0 200 200"
@@ -61,6 +76,29 @@ export default function HeroDuck() {
             />
             {/* Ojo */}
             <circle cx="93" cy="7" r="1.5" fill="#171717" />
+
+            {/* Efecto Quack al hacer click */}
+            <AnimatePresence key={quackKey}>
+              <motion.g
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: [0, 1, 0], scale: [0.5, 1.2, 1.5], x: [0, 0, 10], y: [0, -10, -20] }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+              >
+                {/* Burbuja cómic */}
+                <path
+                  d="M100 -15 Q 115 -25, 130 -15 Q 140 -5, 130 5 Q 115 15, 100 5 Q 90 -5, 100 -15Z"
+                  fill="white"
+                  stroke="#171717"
+                  strokeWidth="1.2"
+                />
+                <path d="M98 2 L 92 12 L 102 4" fill="white" stroke="#171717" strokeWidth="1.2" />
+                <text x="115" y="-2" textAnchor="middle" fontSize="8" fontFamily="var(--font-geist-mono), monospace" fill="#991b1b" fontWeight="bold">¡Quack!</text>
+                {/* Ondas de sonido */}
+                <motion.circle cx="105" cy="0" r="3" fill="none" stroke="#991b1b" strokeWidth="1" initial={{ opacity: 0, r: 2 }} animate={{ opacity: [0.8, 0], r: [2, 12] }} transition={{ duration: 0.6, delay: 0.1 }} />
+                <motion.circle cx="105" cy="0" r="3" fill="none" stroke="#991b1b" strokeWidth="0.8" initial={{ opacity: 0, r: 2 }} animate={{ opacity: [0.6, 0], r: [2, 18] }} transition={{ duration: 0.7, delay: 0.2 }} />
+              </motion.g>
+            </AnimatePresence>
+
             {/* Ala */}
             <motion.path
               d="M35 38 C 30 38, 25 35, 28 30 C 32 25, 45 25, 55 28 C 62 30, 60 38, 52 40 C 45 42, 38 40, 35 38Z"
@@ -116,6 +154,32 @@ export default function HeroDuck() {
             transition={{ repeat: Infinity, duration: 2.5, delay: 0.4, ease: "easeInOut" }}
           />
         </svg>
+
+        <AnimatePresence>
+          {showStory && (
+            <motion.div
+              initial={{ opacity: 0, y: 20, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 10, scale: 0.95 }}
+              transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+              className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-72 bg-white/95 backdrop-blur-sm rounded-xl p-5 shadow-2xl border border-neutral-100 z-50"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <p className="text-[10px] font-mono uppercase tracking-widest text-red-800 mb-2">
+                La leyenda del pato
+              </p>
+              <p className="text-sm text-neutral-700 italic leading-relaxed">
+                Este pato nada contra la corriente. Mientras otros siguen la multitud, él elige su propio rumbo. Así como él, quienes invierten con visión no temen a los riesgos calculados: transforman la corriente en oportunidad, y la incertidumbre en patrimonio.
+              </p>
+              <button
+                onClick={() => setShowStory(false)}
+                className="mt-3 text-xs text-neutral-400 hover:text-neutral-600 transition-colors block ml-auto"
+              >
+                Cerrar
+              </button>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </motion.div>
 
       {/* Elemento decorativo sutil: líneas de contracorriente en el fondo izquierdo */}

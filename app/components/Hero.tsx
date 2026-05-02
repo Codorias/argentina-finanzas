@@ -11,7 +11,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero" className="relative pt-28 pb-16 sm:pt-32 sm:pb-20 md:pt-48 md:pb-32 px-6 bg-neutral-50 overflow-hidden">
+    <section id="hero" className="relative pt-28 pb-16 sm:pt-32 sm:pb-20 md:pt-48 md:pb-32 px-6 bg-neutral-50">
       {/* Ilustración del pato contracorriente - fondo decorativo */}
       <HeroDuck />
 
