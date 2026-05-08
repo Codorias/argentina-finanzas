@@ -15,14 +15,6 @@ export default function Hero() {
       <HeroDuck />
 
       <div className="relative z-10 max-w-3xl mx-auto text-center">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-mono text-xs sm:text-sm tracking-widest uppercase text-red-800 mb-5"
-        >
-          Hasta el dólar se devalúa
-        </motion.p>
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
