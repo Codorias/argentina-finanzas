@@ -1,7 +1,11 @@
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
+This version (16.2.4) has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
+
+**React Compiler is enabled** (`babel-plugin-react-compiler@1.0.0` in devDependencies). Don't reach for `useMemo` / `useCallback` / `React.memo` reflexively — the compiler handles memoization. Only add manual memo when the compiler can't infer or you've measured a problem.
+
+**Static export mode** (`output: 'export'`). This means: no `route.ts` API handlers, no `headers()` / `cookies()`, no on-demand revalidation, no Image Optimization (already opted out). Every page must be enumerable at build time. Forms / dynamic behavior must be client-side or rely on third-party services (Formspree, Resend, etc.).
 <!-- END:nextjs-agent-rules -->
 
 # Argentina Finanzas — Landing Page
@@ -36,18 +40,20 @@ Landing page profesional, minimalista y responsive en español para **Joaquín R
 app/
   components/
     Navbar.tsx              # Nav responsive con mobile menu
-    Hero.tsx                # Hero principal + CTAs
+    Hero.tsx                # Hero "Invertí desde Argentina hacia el mundo" + CTAs
     HeroDuck.tsx            # Ilustración SVG pato contracorriente animado
-    TrustBar.tsx            # Stats y regulación (CNV, AAGI, CFP)
-    ClientSegments.tsx      # Individuos / Familias / Empresas
-    Services.tsx            # Planificación / Jubilación / Inversión
+    TrustBar.tsx            # CNV #2245 / Abogado / UdeSA / Carteras globales
+    WhyInvest.tsx           # Sección educativa "hasta el dólar se devalúa" + metas
+    ClientSegments.tsx      # Inversores minoristas / Familias / Pymes
+    Services.tsx            # Planificación / Gestión / Retiro / Acompañamiento
+    TrustSafety.tsx         # "¿Vos manejás mi plata?" → No. Custodia + reportes
     Process.tsx             # 3 pasos con animaciones stagger
     RetirementCalculator.tsx # Calculadora interactiva de jubilación (5 sliders)
-    About.tsx               # Bio Joaquín Rodríguez
-    Testimonials.tsx        # 3 testimonios placeholder
-    FAQ.tsx                 # Acordeón 5 preguntas frecuentes
-    Insights.tsx            # 3 artículos placeholder
-    LeadMagnet.tsx          # Banner CTA guía gratuita
+    About.tsx               # Bio Joaquín Rodríguez Nuin (CNV 2245, abogado, UdeSA)
+    Testimonials.tsx        # 3 testimonios placeholder (TODO: reemplazar)
+    FAQ.tsx                 # Acordeón con foco en custodia, retiro joven, inversión global
+    Insights.tsx            # 3 artículos placeholder (educación + cartera global + retiro)
+    LeadMagnet.tsx          # Banner "Tu primera cartera global desde Argentina"
     Contact.tsx             # Calendly + WhatsApp + Email + Formulario
     Footer.tsx              # Disclaimer colapsable CNV/Ley 25.326/BCRA
     FloatingWhatsApp.tsx    # Botón flotante WhatsApp (desktop only)
@@ -114,10 +120,16 @@ Para grids con stagger, se usa `StaggerContainer` + `StaggerItem` dentro del com
 | `1234567890` | Hero.tsx, Contact.tsx, Footer.tsx, StickyBottomBar.tsx, FloatingWhatsApp.tsx | WhatsApp número real |
 | `contacto@argentinafinanzas.com` | Footer.tsx, Contact.tsx | Email real |
 | `calendly.com/tu-usuario` | Contact.tsx, StickyBottomBar.tsx | Calendly link real |
-| `Mat. AAGI #XXXX` | TrustBar.tsx | Matrícula AAGI real |
+| Social URLs `@argentinafinanzas` | Footer.tsx | Confirmar handles exactos en TikTok / IG / YouTube |
+| LinkedIn `joaquin-rodriguez-nuin` | Footer.tsx | Confirmar slug real |
 | Testimonios | Testimonials.tsx | Nombres y textos reales |
 | Artículos | Insights.tsx | URLs y títulos reales del blog |
 | Lead magnet | LeadMagnet.tsx | Link real de descarga / formulario |
+
+### Confirmados (no son placeholders)
+- **Joaquín Rodríguez Nuin** — nombre completo del cliente (ABOUT.md)
+- **Agente Productor CNV matrícula #2245**
+- Abogado, idóneo en mercado de capitales, maestrando en finanzas en UdeSA
 
 ### Formulario de Contacto
 - Simula envío con `setTimeout`
@@ -147,9 +159,11 @@ Para grids con stagger, se usa `StaggerContainer` + `StaggerItem` dentro del com
 ### Local
 ```bash
 npm install
-npm run dev        # localhost:3000
+npm run dev        # localhost:3000 (Turbopack)
 npm run build      # genera dist/ estático
+npm run lint       # ESLint 9 + eslint-config-next
 ```
+No hay test runner configurado.
 
 ### Deploy (Vercel)
 ```bash
@@ -163,15 +177,27 @@ O automático vía GitHub integration en cada push a `main`.
 - `next-env.d.ts` se autogenera. No editar manualmente.
 - `dist/` no debe commitearse (está en `.gitignore`).
 - `safe-area-inset-bottom` se aplica inline en StickyBottomBar para evitar warning de PostCSS.
+- `ABOUT.md` (sin track) contiene el brief del cliente (qué hace, propuesta de valor, target, objeciones). Es la fuente de verdad para messaging — leerlo antes de cambiar copy.
 
 ---
 
+## Messaging / Voice
+- Tono: argentino, directo, sin chamuyo. Usa **vos**.
+- Anti-status-quo (alineado con el branding "pato contracorriente").
+- Frases recurrentes que el cliente quiere transmitir:
+  - "Hasta el dólar se devalúa"
+  - "No hace falta ser rico para invertir"
+  - "Tu plata queda en TUS cuentas" (objeción #1 a desactivar)
+  - "Invertí desde Argentina, hacia el mundo"
+- Target nuevo: gente joven (25–45) armando cartera de retiro. El cliente legacy es +60 pero no llegó por web.
+- Objetivo de la página: capturar leads (nombre + email/WhatsApp) y agendar consultas. CTAs deben empujar a contacto/agenda.
+
 ## Next Steps (for future sessions)
-1. Reemplazar todos los placeholders con datos reales
+1. Reemplazar todos los placeholders con datos reales (ver tabla arriba)
 2. Integrar formulario de contacto con backend real (Formspree/Resend)
 3. Conectar dominio propio en Vercel
 4. Agregar Google Analytics / Tag Manager
 5. Implementar blog real (ahora son placeholders)
 6. Subir testimonios con fotos reales
-7. Añadir schema.org JSON-LD para SEO local
+7. Añadir schema.org JSON-LD para SEO local (FinancialService)
 8. Internacionalización (i18n) si se expande a otros países

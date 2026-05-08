@@ -13,15 +13,30 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Joaquín Rodríguez | Argentina Finanzas",
-  description: "Asesoría financiera profesional en planificación de jubilación, inversión y gestión de patrimonio. Estrategias personalizadas para construir tu futuro.",
-  keywords: ["asesor financiero", "planificación financiera", "jubilación", "inversión", "patrimonio", "Argentina Finanzas"],
-  authors: [{ name: "Joaquín Rodríguez" }],
+  title: "Argentina Finanzas | Joaquín Rodríguez Nuin — Asesor financiero",
+  description: "Invertí desde Argentina hacia el mundo. Carteras globales con tu plata siempre en tus cuentas. Agente Productor CNV #2245. Asesoramiento humano para inversores minoristas, familias y pymes.",
+  keywords: [
+    "asesor financiero argentina",
+    "invertir desde argentina",
+    "cartera global",
+    "cartera de retiro",
+    "agente productor CNV",
+    "Joaquín Rodríguez Nuin",
+    "Argentina Finanzas",
+    "inversión joven",
+  ],
+  authors: [{ name: "Joaquín Rodríguez Nuin" }],
   openGraph: {
-    title: "Joaquín Rodríguez | Argentina Finanzas",
-    description: "Construye tu patrimonio con estrategia y confianza.",
+    title: "Argentina Finanzas — Invertí desde Argentina, hacia el mundo",
+    description: "Hasta el dólar se devalúa. Construí una cartera global con tu plata siempre en tus cuentas. Agente Productor CNV #2245.",
     type: "website",
     locale: "es_AR",
+    siteName: "Argentina Finanzas",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Argentina Finanzas — Invertí desde Argentina, hacia el mundo",
+    description: "Carteras globales. Tu plata, en tus cuentas. CNV #2245.",
   },
 };
 

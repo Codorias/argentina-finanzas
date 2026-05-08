@@ -1,8 +1,10 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import TrustBar from "./components/TrustBar";
+import WhyInvest from "./components/WhyInvest";
 import ClientSegments from "./components/ClientSegments";
 import Services from "./components/Services";
+import TrustSafety from "./components/TrustSafety";
 import Process from "./components/Process";
 import RetirementCalculator from "./components/RetirementCalculator";
 import About from "./components/About";
@@ -22,8 +24,10 @@ export default function Home() {
       <main>
         <Hero />
         <TrustBar />
+        <WhyInvest />
         <ClientSegments />
         <Services />
+        <TrustSafety />
         <Process />
         <RetirementCalculator />
         <About />

@@ -6,13 +6,15 @@ import { motion, AnimatePresence } from "framer-motion";
 
 // Orden exacto de las secciones en la página
 const mainLinks = [
-  { label: "Segmentos", id: "segmentos" },
+  { label: "Por qué", id: "por-que" },
+  { label: "Para quién", id: "segmentos" },
   { label: "Servicios", id: "servicios" },
-  { label: "Proceso", id: "proceso" },
+  { label: "Tu plata", id: "confianza" },
   { label: "Calculadora", id: "calculadora" },
 ];
 
 const moreLinks = [
+  { label: "Proceso", id: "proceso" },
   { label: "Sobre mí", id: "sobre-mi" },
   { label: "Testimonios", id: "testimonios" },
   { label: "FAQ", id: "faq" },
@@ -98,7 +100,7 @@ export default function Navbar() {
 
         {/* Tablet nav (md-lg): primeros 3 links en orden de página */}
         <div className="hidden md:flex lg:hidden items-center gap-5 text-sm font-medium text-neutral-600">
-          {[{ label: "Segmentos", id: "segmentos" }, { label: "Servicios", id: "servicios" }, { label: "Proceso", id: "proceso" }].map((link) => (
+          {[{ label: "Por qué", id: "por-que" }, { label: "Servicios", id: "servicios" }, { label: "Tu plata", id: "confianza" }].map((link) => (
             <button key={link.id} onClick={() => scrollTo(link.id)} className="hover:text-red-800 transition-colors">
               {link.label}
             </button>
@@ -135,12 +137,13 @@ export default function Navbar() {
           >
             <div className="px-6 py-4 flex flex-col gap-1 text-base font-medium text-neutral-600 max-h-[70vh] overflow-y-auto">
               {[
-                { label: "Segmentos", id: "segmentos" },
+                { label: "Por qué invertir", id: "por-que" },
+                { label: "Para quién", id: "segmentos" },
                 { label: "Servicios", id: "servicios" },
+                { label: "Tu plata, tu cuenta", id: "confianza" },
                 { label: "Proceso", id: "proceso" },
                 { label: "Calculadora", id: "calculadora" },
                 { label: "Sobre mí", id: "sobre-mi" },
-                { label: "Testimonios", id: "testimonios" },
                 { label: "FAQ", id: "faq" },
                 { label: "Insights", id: "insights" },
                 { label: "Contacto", id: "contacto" },

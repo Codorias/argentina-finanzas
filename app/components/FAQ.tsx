@@ -6,24 +6,28 @@ import { AnimatedSection } from "./AnimatedSection";
 
 const faqs = [
   {
-    question: "¿Cuál es el mínimo de inversión para empezar?",
-    answer: "No existe un monto mínimo fijo. Diseñamos estrategias adaptadas a cada perfil, desde pequeños ahorristas hasta patrimonios importantes. Lo importante es empezar con un plan claro.",
+    question: "¿Vos manejás mi plata?",
+    answer: "No. Tu plata queda siempre en cuentas a tu nombre, en brokers regulados. Yo asesoro y recomiendo, pero las decisiones y los movimientos los hacés vos (o me autorizás puntualmente). Nunca recibo ni custodio fondos de clientes.",
+  },
+  {
+    question: "¿Se puede invertir desde Argentina hacia el mundo?",
+    answer: "Sí, y es lo que hacemos. Armamos carteras globales —EE.UU., Europa, mercados emergentes, índices, bonos— operando legalmente desde Argentina con cuentas habilitadas. No te quedás atado al riesgo argentino.",
+  },
+  {
+    question: "¿Cuál es el mínimo para empezar?",
+    answer: "No hay un monto mínimo fijo. La idea es que empieces con lo que tenés, aunque sea poco, y construyas el hábito. Mucho más importante que el monto inicial es el plan, la constancia y empezar temprano.",
+  },
+  {
+    question: "Soy joven. ¿Tiene sentido pensar en jubilación ahora?",
+    answer: "Es exactamente cuando más sentido tiene. El interés compuesto premia los años, no los pesos. Empezar a los 30 con poco rinde mucho más que empezar a los 50 con bastante. Mis mejores carteras de retiro son las de quienes empezaron temprano.",
   },
   {
     question: "¿Cómo se cobra la asesoría?",
-    answer: "Trabajo con un modelo de fee-only (solo honorarios), sin comisiones ocultas por productos vendidos. Esto garantiza que mis recomendaciones estén 100% alineadas con tus intereses. El fee depende de la complejidad y el servicio contratado.",
+    answer: "Modelo transparente: honorarios acordados al inicio, sin comisiones ocultas por productos vendidos. Mis recomendaciones se alinean con tus intereses, no con incentivos de terceros.",
   },
   {
-    question: "¿Dónde se custodian mis activos?",
-    answer: "Tus activos se mantienen a tu nombre en entidades financieras reguladas por el BCRA y la CNV. Yo no tengo acceso a tu dinero; mi rol es asesorarte en las decisiones de inversión.",
-  },
-  {
-    question: "¿Con qué frecuencia nos reunimos?",
-    answer: "La frecuencia depende del plan contratado. Generalmente hacemos reuniones trimestrales de seguimiento, pero estoy disponible para consultas puntuales cuando lo necesites.",
-  },
-  {
-    question: "¿Qué diferencia a un asesor independiente de un banco?",
-    answer: "Como asesor independiente no tengo conflictos de interés: no cobro comisiones por vender productos de ninguna entidad. Mi único objetivo es optimizar tu patrimonio con las mejores opciones del mercado.",
+    question: "¿Cuánto seguimiento voy a tener?",
+    answer: "Acompañamiento constante, no «te doy un plan y chau». Reportes periódicos del rendimiento real de tu cartera, reuniones de revisión y disponibilidad para consultas puntuales cuando aparezcan dudas o cambios.",
   },
 ];
 

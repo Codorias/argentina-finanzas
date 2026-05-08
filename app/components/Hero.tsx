@@ -12,17 +12,25 @@ export default function Hero() {
 
   return (
     <section id="hero" className="relative pt-28 pb-16 sm:pt-32 sm:pb-20 md:pt-48 md:pb-32 px-6 bg-neutral-50">
-      {/* Ilustración del pato contracorriente - fondo decorativo */}
       <HeroDuck />
 
       <div className="relative z-10 max-w-3xl mx-auto text-center">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="font-mono text-xs sm:text-sm tracking-widest uppercase text-red-800 mb-5"
+        >
+          Hasta el dólar se devalúa
+        </motion.p>
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           className="text-4xl md:text-6xl font-bold tracking-tight text-neutral-900 leading-tight"
         >
-          Construye tu patrimonio con <span className="text-red-800">estrategia</span> y confianza
+          Invertí desde Argentina,<br />
+          <span className="text-red-800">hacia el mundo.</span>
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 30 }}
@@ -30,7 +38,8 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
           className="mt-6 text-lg md:text-xl text-neutral-600 leading-relaxed max-w-2xl mx-auto"
         >
-          Asesoría financiera independiente especializada en planificación de jubilación, inversión y gestión de patrimonio.
+          No hace falta ser rico para invertir. Hace falta empezar.
+          Construí una cartera global mientras tu plata queda siempre en <strong className="text-neutral-900">tus cuentas</strong>.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -47,21 +56,20 @@ export default function Hero() {
             className="flex items-center gap-2 px-6 py-3 bg-neutral-900 text-white rounded-full font-medium hover:bg-red-800 transition-colors w-full sm:w-auto justify-center"
           >
             <MessageCircle size={18} />
-            Agenda por WhatsApp
+            Agendá tu consulta
           </motion.a>
           <motion.button
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
-            onClick={() => scrollTo("contacto")}
+            onClick={() => scrollTo("por-que")}
             className="flex items-center gap-2 px-6 py-3 border border-neutral-300 text-neutral-900 rounded-full font-medium hover:border-red-800 hover:text-red-800 transition-colors w-full sm:w-auto justify-center"
           >
             <ArrowDown size={18} />
-            Formulario de contacto
+            ¿Por qué invertir?
           </motion.button>
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

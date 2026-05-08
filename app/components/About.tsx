@@ -1,6 +1,6 @@
 "use client";
 
-import { Award, Users, Calendar } from "lucide-react";
+import { Scale, GraduationCap, Shield } from "lucide-react";
 import { AnimatedSection } from "./AnimatedSection";
 import { motion } from "framer-motion";
 
@@ -18,25 +18,30 @@ export default function About() {
           </motion.div>
         </AnimatedSection>
         <AnimatedSection direction="right">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-neutral-900">Sobre mí</h2>
+          <p className="font-mono text-xs tracking-widest uppercase text-red-800 mb-3">Sobre mí</p>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-neutral-900">
+            Joaquín Rodríguez Nuin
+          </h2>
           <p className="mt-4 text-lg text-neutral-600 leading-relaxed">
-            Soy Joaquín Rodríguez, fundador de Argentina Finanzas. Con más de 15 años de experiencia en el sector financiero, ayudo a familias y profesionales a tomar decisiones inteligentes con su dinero. Mi enfoque se basa en la transparencia, el análisis riguroso y un plan personalizado para cada cliente.
+            Asesor financiero independiente y fundador de Argentina Finanzas. Acompaño a inversores
+            minoristas, familias y pymes a construir carteras globales desde Argentina, con atención
+            humana, reportes claros de rendimiento y cero conflictos de interés.
           </p>
           <div className="mt-8 grid grid-cols-3 gap-2 sm:gap-4">
             <div className="text-center p-2 sm:p-0">
-              <Calendar className="w-5 h-5 sm:w-6 sm:h-6 mx-auto text-red-800 mb-1 sm:mb-2" strokeWidth={1.5} />
-              <p className="text-xl sm:text-2xl font-bold text-neutral-900">15+</p>
-              <p className="text-xs sm:text-sm text-neutral-500">Años de experiencia</p>
+              <Shield className="w-5 h-5 sm:w-6 sm:h-6 mx-auto text-red-800 mb-1 sm:mb-2" strokeWidth={1.5} />
+              <p className="text-base sm:text-lg font-bold text-neutral-900">CNV #2245</p>
+              <p className="text-xs sm:text-sm text-neutral-500">Agente Productor</p>
             </div>
             <div className="text-center p-2 sm:p-0">
-              <Users className="w-5 h-5 sm:w-6 sm:h-6 mx-auto text-red-800 mb-1 sm:mb-2" strokeWidth={1.5} />
-              <p className="text-xl sm:text-2xl font-bold text-neutral-900">300+</p>
-              <p className="text-xs sm:text-sm text-neutral-500">Clientes asesorados</p>
+              <Scale className="w-5 h-5 sm:w-6 sm:h-6 mx-auto text-red-800 mb-1 sm:mb-2" strokeWidth={1.5} />
+              <p className="text-base sm:text-lg font-bold text-neutral-900">Abogado</p>
+              <p className="text-xs sm:text-sm text-neutral-500">Idóneo en MdC</p>
             </div>
             <div className="text-center p-2 sm:p-0">
-              <Award className="w-5 h-5 sm:w-6 sm:h-6 mx-auto text-red-800 mb-1 sm:mb-2" strokeWidth={1.5} />
-              <p className="text-xl sm:text-2xl font-bold text-neutral-900">CFP®</p>
-              <p className="text-xs sm:text-sm text-neutral-500">Certificación internacional</p>
+              <GraduationCap className="w-5 h-5 sm:w-6 sm:h-6 mx-auto text-red-800 mb-1 sm:mb-2" strokeWidth={1.5} />
+              <p className="text-base sm:text-lg font-bold text-neutral-900">UdeSA</p>
+              <p className="text-xs sm:text-sm text-neutral-500">Maestrando en Finanzas</p>
             </div>
           </div>
         </AnimatedSection>

@@ -3,25 +3,25 @@ import { AnimatedSection, StaggerContainer, StaggerItem } from "./AnimatedSectio
 
 const articles = [
   {
-    tag: "Planificación",
-    title: "¿Cuánto necesitás para jubilarte sin depender de la ANSES?",
-    excerpt: "Un análisis práctico sobre el gap de ingresos en la jubilación y cómo cerrarlo con inversión disciplinada.",
+    tag: "Educación",
+    title: "Hasta el dólar se devalúa: por qué tener «guardada» tu plata es perderla",
+    excerpt: "La inflación de EE.UU. también te corre. Te muestro qué significa esto en números concretos para tus ahorros.",
     readTime: "5 min",
-    date: "Abr 2025",
+    date: "2026",
   },
   {
-    tag: "Inversión",
-    title: "Dólar vs. FCI: ¿dónde conviene poner los ahorros en 2025?",
-    excerpt: "Comparativa de rendimientos, riesgos y liquidez entre las opciones más elegidas por los ahorristas argentinos.",
+    tag: "Cartera global",
+    title: "Cómo invertir desde Argentina hacia el mundo (sin volverte loco)",
+    excerpt: "Brokers, instrumentos, regulación y los pasos reales para acceder a mercados globales operando legalmente desde acá.",
     readTime: "7 min",
-    date: "Mar 2025",
+    date: "2026",
   },
   {
-    tag: "Fiscalidad",
-    title: "Bienes Personales: estrategias legales para optimizar la carga tributaria",
-    excerpt: "Conocé las herramientas de planificación fiscal que pueden reducir significativamente tu impuesto anual.",
+    tag: "Retiro",
+    title: "Empezá tu cartera de retiro a los 30: el costo real de esperar 10 años",
+    excerpt: "El interés compuesto premia los años, no los pesos. Una cuenta clara de cuánto te cuesta postergar.",
     readTime: "6 min",
-    date: "Mar 2025",
+    date: "2026",
   },
 ];
 
@@ -30,8 +30,11 @@ export default function Insights() {
     <section id="insights" className="py-20 md:py-32 px-6 bg-neutral-50">
       <div className="max-w-5xl mx-auto">
         <AnimatedSection className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-neutral-900">Insights</h2>
-          <p className="mt-4 text-lg text-neutral-600">Análisis y estrategias para tomar mejores decisiones financieras.</p>
+          <p className="font-mono text-xs tracking-widest uppercase text-red-800 mb-3">Insights</p>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-neutral-900">
+            Lo que te conviene saber antes de invertir
+          </h2>
+          <p className="mt-4 text-lg text-neutral-600">Conceptos claros, sin chamuyo, en criollo.</p>
         </AnimatedSection>
 
         <StaggerContainer className="grid md:grid-cols-3 gap-6" staggerDelay={0.12}>
