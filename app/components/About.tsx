@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <section id="sobre-mi" className="py-20 md:py-32 px-6 bg-neutral-50">
+    <section id="sobre-mi" className="py-20 md:py-32 px-6 bg-white">
       <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <AnimatedSection direction="left" className="flex justify-center md:justify-start">
           <motion.div

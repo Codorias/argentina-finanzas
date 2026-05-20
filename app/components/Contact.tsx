@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { MessageCircle, Send, AlertTriangle, CalendarDays } from "lucide-react";
+import { MessageCircle, Send, AlertTriangle } from "lucide-react";
 import { AnimatedSection } from "./AnimatedSection";
 import { motion } from "framer-motion";
 
@@ -24,7 +24,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contacto" className="py-20 md:py-32 px-6 bg-white">
+    <section id="contacto" className="py-20 md:py-32 px-6 bg-neutral-50">
       <div className="max-w-5xl mx-auto">
         <AnimatedSection className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-neutral-900">Contacto</h2>
@@ -34,24 +34,6 @@ export default function Contact() {
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
           {/* Opciones de contacto */}
           <AnimatedSection direction="left" className="space-y-4">
-            <a
-              href="https://calendly.com/tu-usuario" /* <-- REEMPLAZAR CON TU LINK DE CALENDLY */
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-4 p-5 rounded-2xl bg-neutral-900 text-white hover:bg-neutral-800 transition-colors"
-            >
-              <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center shrink-0 group-hover:bg-red-800 transition-colors">
-                <CalendarDays size={22} />
-              </div>
-              <div className="flex-1 min-w-0">
-                <p className="font-semibold">Agendá una reunión</p>
-                <p className="text-sm text-neutral-400">Elegí día y horario en mi calendario. Sin compromiso.</p>
-              </div>
-              <svg className="w-5 h-5 text-neutral-400 group-hover:text-white transition-colors shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </a>
-
             <a
               href="https://wa.me/1234567890?text=Hola,%20me%20interesa%20recibir%20asesoría%20financiera"
               target="_blank"
@@ -69,14 +51,6 @@ export default function Contact() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </a>
-
-            <div className="p-5 rounded-2xl bg-neutral-50 border border-neutral-100">
-              <p className="font-medium text-neutral-900 mb-1">Email directo</p>
-              <a href="mailto:contacto@argentinafinanzas.com" className="text-red-800 hover:underline">
-                contacto@argentinafinanzas.com
-              </a>
-              <p className="text-sm text-neutral-500 mt-1">Para consultas técnicas o documentación.</p>
-            </div>
 
             <div className="flex items-start gap-3 p-4 rounded-xl bg-amber-50 border border-amber-100">
               <AlertTriangle className="w-5 h-5 text-amber-700 shrink-0 mt-0.5" />

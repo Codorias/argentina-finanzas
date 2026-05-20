@@ -10,15 +10,14 @@ const mainLinks = [
   { label: "Para quién", id: "segmentos" },
   { label: "Servicios", id: "servicios" },
   { label: "Tu plata", id: "confianza" },
-  { label: "Calculadora", id: "calculadora" },
+  { label: "Proceso", id: "proceso" },
 ];
 
 const moreLinks = [
-  { label: "Proceso", id: "proceso" },
+  { label: "Calculadora", id: "calculadora" },
   { label: "Sobre mí", id: "sobre-mi" },
   { label: "Testimonios", id: "testimonios" },
   { label: "FAQ", id: "faq" },
-  { label: "Insights", id: "insights" },
 ];
 
 export default function Navbar() {
@@ -94,7 +93,7 @@ export default function Navbar() {
             onClick={() => scrollTo("contacto")}
             className="px-4 py-2 bg-neutral-900 text-white rounded-full hover:bg-red-800 transition-colors"
           >
-            Agenda una llamada
+            Contacto
           </motion.button>
         </div>
 
@@ -111,7 +110,7 @@ export default function Navbar() {
             onClick={() => scrollTo("contacto")}
             className="px-4 py-2 bg-neutral-900 text-white rounded-full hover:bg-red-800 transition-colors text-sm"
           >
-            Agenda
+            Contacto
           </motion.button>
         </div>
 
@@ -144,8 +143,8 @@ export default function Navbar() {
                 { label: "Proceso", id: "proceso" },
                 { label: "Calculadora", id: "calculadora" },
                 { label: "Sobre mí", id: "sobre-mi" },
+                { label: "Testimonios", id: "testimonios" },
                 { label: "FAQ", id: "faq" },
-                { label: "Insights", id: "insights" },
                 { label: "Contacto", id: "contacto" },
               ].map((link) => (
                 <button
@@ -160,7 +159,7 @@ export default function Navbar() {
                 onClick={() => scrollTo("contacto")}
                 className="mt-2 px-4 py-3 bg-neutral-900 text-white rounded-full text-center font-medium"
               >
-                Agenda una llamada
+                Contacto
               </button>
             </div>
           </motion.div>

@@ -10,8 +10,6 @@ import RetirementCalculator from "./components/RetirementCalculator";
 import About from "./components/About";
 import Testimonials from "./components/Testimonials";
 import FAQ from "./components/FAQ";
-import Insights from "./components/Insights";
-import LeadMagnet from "./components/LeadMagnet";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
@@ -33,8 +31,6 @@ export default function Home() {
         <About />
         <Testimonials />
         <FAQ />
-        <Insights />
-        <LeadMagnet />
         <Contact />
       </main>
       <Footer />

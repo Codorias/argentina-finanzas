@@ -1,6 +1,6 @@
 "use client";
 
-import { MessageCircle, CalendarDays } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function StickyBottomBar() {
@@ -15,17 +15,7 @@ export default function StickyBottomBar() {
           className="flex-1 flex items-center justify-center gap-2 py-3 bg-green-600 text-white rounded-full font-medium text-sm"
         >
           <MessageCircle size={18} />
-          WhatsApp
-        </motion.a>
-        <motion.a
-          whileTap={{ scale: 0.97 }}
-          href="https://calendly.com/tu-usuario" /* <-- REEMPLAZAR CON TU LINK DE CALENDLY */
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex-1 flex items-center justify-center gap-2 py-3 bg-red-800 text-white rounded-full font-medium text-sm"
-        >
-          <CalendarDays size={18} />
-          Agendar
+          Escribime por WhatsApp
         </motion.a>
       </div>
     </div>

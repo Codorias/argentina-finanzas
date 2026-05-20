@@ -26,7 +26,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="servicios" className="py-20 md:py-32 px-6 bg-white">
+    <section id="servicios" className="py-20 md:py-32 px-6 bg-neutral-50">
       <div className="max-w-5xl mx-auto">
         <AnimatedSection className="text-center mb-16 max-w-2xl mx-auto">
           <p className="font-mono text-xs tracking-widest uppercase text-red-800 mb-3">Servicios</p>

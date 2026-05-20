@@ -13,7 +13,7 @@ const goals = [
 
 export default function WhyInvest() {
   return (
-    <section id="por-que" className="py-20 md:py-32 px-6 bg-white relative overflow-hidden">
+    <section id="por-que" className="py-20 md:py-32 px-6 bg-neutral-50 relative overflow-hidden">
       <div className="max-w-5xl mx-auto">
         <AnimatedSection className="max-w-3xl">
           <p className="font-mono text-xs tracking-widest uppercase text-red-800 mb-4">¿Por qué invertir?</p>
