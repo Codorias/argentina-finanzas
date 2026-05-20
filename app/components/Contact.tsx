@@ -35,7 +35,7 @@ export default function Contact() {
           {/* Opciones de contacto */}
           <AnimatedSection direction="left" className="space-y-4">
             <a
-              href="https://wa.me/1234567890?text=Hola,%20me%20interesa%20recibir%20asesoría%20financiera"
+              href="https://wa.me/5491170663979?text=Hola,%20me%20interesa%20recibir%20asesoría%20financiera"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center gap-4 p-5 rounded-2xl bg-green-600 text-white hover:bg-green-700 transition-colors"

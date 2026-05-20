@@ -42,7 +42,7 @@ export default function Hero() {
           <motion.a
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
-            href="https://wa.me/1234567890?text=Hola,%20me%20gustaría%20agendar%20una%20consulta"
+            href="https://wa.me/5491170663979?text=Hola,%20me%20gustaría%20agendar%20una%20consulta"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-6 py-3 bg-neutral-900 text-white rounded-full font-medium hover:bg-red-800 transition-colors w-full sm:w-auto justify-center"

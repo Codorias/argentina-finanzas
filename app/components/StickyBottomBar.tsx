@@ -9,7 +9,7 @@ export default function StickyBottomBar() {
       <div className="flex items-center gap-3">
         <motion.a
           whileTap={{ scale: 0.97 }}
-          href="https://wa.me/1234567890?text=Hola,%20me%20interesa%20recibir%20asesoría%20financiera"
+          href="https://wa.me/5491170663979?text=Hola,%20me%20interesa%20recibir%20asesoría%20financiera"
           target="_blank"
           rel="noopener noreferrer"
           className="flex-1 flex items-center justify-center gap-2 py-3 bg-green-600 text-white rounded-full font-medium text-sm"
