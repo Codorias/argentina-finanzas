@@ -4,6 +4,7 @@ import TrustBar from "./components/TrustBar";
 import WhyInvest from "./components/WhyInvest";
 import ClientSegments from "./components/ClientSegments";
 import Services from "./components/Services";
+import Costos from "./components/Costos";
 import TrustSafety from "./components/TrustSafety";
 import Process from "./components/Process";
 import RetirementCalculator from "./components/RetirementCalculator";
@@ -24,8 +25,9 @@ export default function Home() {
         <TrustBar />
         <WhyInvest />
         <ClientSegments />
-        <Services />
         <TrustSafety />
+        <Services />
+        <Costos />
         <Process />
         <RetirementCalculator />
         <About />

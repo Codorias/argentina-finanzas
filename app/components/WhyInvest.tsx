@@ -57,7 +57,7 @@ export default function WhyInvest() {
                 <p className="font-mono text-xs tracking-widest uppercase">El costo de esperar</p>
               </div>
               <p className="mt-3 text-3xl sm:text-4xl font-bold">10 años</p>
-              <p className="mt-1 text-sm text-neutral-400">la diferencia entre empezar hoy o &quot;cuando junte más&quot;.</p>
+              <p className="mt-1 text-sm text-neutral-400">de interés compuesto que perdés por esperar a &quot;juntar más&quot;.</p>
             </div>
           </div>
         </AnimatedSection>

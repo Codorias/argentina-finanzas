@@ -8,8 +8,9 @@ import { motion, AnimatePresence } from "framer-motion";
 const mainLinks = [
   { label: "Por qué", id: "por-que" },
   { label: "Para quién", id: "segmentos" },
-  { label: "Servicios", id: "servicios" },
   { label: "Tu plata", id: "confianza" },
+  { label: "Servicios", id: "servicios" },
+  { label: "Costos", id: "costos" },
   { label: "Proceso", id: "proceso" },
 ];
 
@@ -99,7 +100,7 @@ export default function Navbar() {
 
         {/* Tablet nav (md-lg): primeros 3 links en orden de página */}
         <div className="hidden md:flex lg:hidden items-center gap-5 text-sm font-medium text-neutral-600">
-          {[{ label: "Por qué", id: "por-que" }, { label: "Servicios", id: "servicios" }, { label: "Tu plata", id: "confianza" }].map((link) => (
+          {[{ label: "Por qué", id: "por-que" }, { label: "Tu plata", id: "confianza" }, { label: "Servicios", id: "servicios" }].map((link) => (
             <button key={link.id} onClick={() => scrollTo(link.id)} className="hover:text-red-800 transition-colors">
               {link.label}
             </button>
@@ -138,8 +139,9 @@ export default function Navbar() {
               {[
                 { label: "Por qué invertir", id: "por-que" },
                 { label: "Para quién", id: "segmentos" },
-                { label: "Servicios", id: "servicios" },
                 { label: "Tu plata, tu cuenta", id: "confianza" },
+                { label: "Servicios", id: "servicios" },
+                { label: "Costos", id: "costos" },
                 { label: "Proceso", id: "proceso" },
                 { label: "Calculadora", id: "calculadora" },
                 { label: "Sobre mí", id: "sobre-mi" },
